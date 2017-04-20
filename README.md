@@ -24,8 +24,10 @@ De kaarten kunnen gedownload worden, maar kunnen ook direct gebruikt worden op w
 Gebruik hiervoor een url die op de volgend wijze is opgebouwd:
 
 ```
-https://edwindj.github.io/nl_maps/<projectie>/<regio>_<jaar>.<formaat>
+https://cartomap.github.io/nl/<projectie>/<regio>_<jaar>.<formaat>
 ```
 Bijvoorbeeld de _gemeente_ kaart van _2016_ met _rijksdriehoekstel_ projectie in _topojson_ formaat  is:
 
-https://edwindj.github.io/nl_maps/rd/gemeente_2016.topojson
+https://cartomap.github.io/nl/rd/gemeente_2016.topojson
+
+Kijk voor een overzichtvan de kaarten op https://cartomap.github.io/nl. 
