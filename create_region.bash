@@ -18,18 +18,20 @@ do
     #echo $REGION
 
     # get WGS84 (EPSG:4326)
-    curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_${REGION}_gegeneraliseerd&outputFormat=json&SRSName=urn:x-ogc:def:crs:EPSG:4326" > "wgs84/${REGION}.json"
+    test ! -f "wgs84/${REGION}.json" && \
+      curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_${REGION}_gegeneraliseerd&outputFormat=json&SRSName=urn:x-ogc:def:crs:EPSG:4326" > "wgs84/${REGION}.json"
     mapshaper "wgs84/$REGION.json" -proj wgs84 -o "wgs84/$REGION.json" 
-    mapshaper "wgs84/$REGION.json" -simplify 10% -o "wgs84/$REGION.geojson" id-field=statcode
-    mapshaper "wgs84/$REGION.json" -simplify 10% -o "wgs84/$REGION.topojson" id-field=statcode
+    mapshaper "wgs84/$REGION.json" -simplify 2.5% keep-shapes -o "wgs84/$REGION.geojson" id-field=statcode
+    mapshaper "wgs84/$REGION.json" -simplify 2.5% keep-shapes -o "wgs84/$REGION.topojson" id-field=statcode
 
     echo "[wgs84,geojson](wgs84/$REGION.geojson)" >> $MDFILE
     echo "[wgs84,topojson](wgs84/$REGION.topojson)" >> $MDFILE
 
     # get rijkdriehoeksstelsel (EPSG:28894)
-    curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_${REGION}_gegeneraliseerd&outputFormat=json" > "rd/${REGION}.json"
-    mapshaper "rd/$REGION.json" -simplify 10% -o "rd/$REGION.geojson" id-field=statcode
-    mapshaper "rd/$REGION.json" -simplify 10% -o "rd/$REGION.topojson" id-field=statcode
+    test ! -f "rd/${REGION}.json" && \
+      curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_${REGION}_gegeneraliseerd&outputFormat=json" > "rd/${REGION}.json"
+    mapshaper "rd/$REGION.json" -simplify 2.5% keep-shapes -o "rd/$REGION.geojson" id-field=statcode
+    mapshaper "rd/$REGION.json" -simplify 2.5% keep-shapes -o "rd/$REGION.topojson" id-field=statcode
     echo "[rd,geojson](rd/$REGION.geojson)" >> $MDFILE
     echo "[rd,topojson](rd/$REGION.topojson)" >> $MDFILE
     echo "" >> $MDFILE
