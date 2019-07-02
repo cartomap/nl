@@ -9,6 +9,10 @@
   "scripts":{
      "test": "./create_geojson.bash"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/cartmap/nl.git"
+  },
   "dependencies": {
     "mapshaper": "^0.4.120"
   }
