@@ -6,6 +6,9 @@
   "repository": "git@github.com:cartomap/nl",
   "author": "Edwin de Jonge <edwindjonge@gmail.com>",
   "license": "GPL-2",
+  "scripts":{
+     "test": "./create_geojson.bash"
+  },
   "dependencies": {
     "mapshaper": "^0.4.120"
   }
