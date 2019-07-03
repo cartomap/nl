@@ -12,7 +12,7 @@ echo -e "# Contents\n" > $MDFILE
 for REGIONNAME in "provincie" "coropgebied" "gemeente" "wijk" "buurt" "arbeidsmarktregio"
 do
   echo -e "## $REGIONNAME \n" >> $MDFILE
-  for YEAR in $(seq $YEAR_NOW -1 2018)
+  for YEAR in $(seq $YEAR_NOW -1 2003)
   do 
     echo -e "${YEAR}:" >> $MDFILE
     REGION="${REGIONNAME}_${YEAR}"
