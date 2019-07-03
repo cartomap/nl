@@ -7,14 +7,14 @@ MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
 YEAR_NOW=$(date +%Y)
 
 MDFILE="build/index.md"
-echo -e "# Contents\n" > $MDFILE
+echo "# Contents\n" > $MDFILE
 
 for REGIONNAME in "provincie" "coropgebied" "gemeente" "wijk" "buurt" "arbeidsmarktregio"
 do
-  echo -e "## $REGIONNAME \n" >> $MDFILE
+  echo "## $REGIONNAME \n" >> $MDFILE
   for YEAR in $(seq $YEAR_NOW -1 2003)
   do 
-    echo -e "${YEAR}:" >> $MDFILE
+    echo "${YEAR}:" >> $MDFILE
     REGION="${REGIONNAME}_${YEAR}"
     echo $REGION
 
