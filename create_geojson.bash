@@ -28,7 +28,7 @@ echo "" > $MDFILE
 writeline "# Contents"
 writeline "" 
 
-for REGIONNAME in "provincie" "coropgebied" "gemeente" "wijk" "buurt" "arbeidsmarktregio"
+for REGIONNAME in "provincie" "coropgebied" "gemeente" "wijk" "buurt" "arbeidsmarktregio" "brandweerregio" "ggdregio" "jeugdzorgregio" "kamervankoophandelregio""landbouwgebied" "zorgkantoorregio"
 do
   writeline "## $REGIONNAME" 
   writeline ""
