@@ -13,7 +13,7 @@ write(){
 }
 
 writeline(){
-  echo "$1" >> $MDFILE
+  echo -e "$1" >> $MDFILE
 }
 
 write_link(){
@@ -33,8 +33,8 @@ do
   writeline "## $REGIONNAME" 
   writeline ""
 
-  writeline "| year | geojson | topojson |"
-  writeline "| --- | --- | --- |"
+  writeline "| year | geojson | topojson |\n"
+  writeline "| --- | --- | --- |\n"
 
   for YEAR in $(seq $YEAR_NOW -1 2003)
   do 
@@ -69,7 +69,7 @@ do
     write_link "wgs84/$REGION.topojson" wgs84
     write " , "
     write_link "rd/$REGION.topojson" rd
-    writeline " |"
+    writeline " |\n"
 
   done
 done
