@@ -1,20 +1,42 @@
 mkdir -p build/rd
 mkdir -p build/wgs84
 
-# REGIONNAME="gemeente"
-# YEAR=2016
 MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
 YEAR_NOW=$(date +%Y)
 
 MDFILE="build/index.md"
-echo "# Contents\n" > $MDFILE
+
+write(){
+  echo -n "$1" >> $MDFILE
+}
+
+writeline(){
+  echo "$1" >> $MDFILE
+}
+
+write_link(){
+  if [ -a build/$1 ]; then
+    write "[$2](./$1)"
+  else
+    write "-"
+  fi
+}
+
+echo "" > $MDFILE
+writeline "# Contents"
+writeline "" 
 
 for REGIONNAME in "provincie" "coropgebied" "gemeente" "wijk" "buurt" "arbeidsmarktregio"
 do
-  echo "## $REGIONNAME \n" >> $MDFILE
+  writeline "## $REGIONNAME" 
+  writeline ""
+
+  writeline "| year | geojson | topojson |"
+  writeline "| --- | --- | --- |"
+
   for YEAR in $(seq $YEAR_NOW -1 2003)
   do 
-    echo "${YEAR}:" >> $MDFILE
+    #echo "${YEAR}:" >> $MDFILE
     REGION="${REGIONNAME}_${YEAR}"
     echo $REGION
 
@@ -25,9 +47,10 @@ do
     $MAPSHAPER "build/wgs84/$REGION.json" -proj wgs84 -o force "build/wgs84/$REGION.json" 
     $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.geojson" id-field=statcode precision=0.001 
     $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.topojson" id-field=statcode precision=0.001
+    
 
-    echo "[wgs84,geojson](wgs84/$REGION.geojson)" >> $MDFILE
-    echo "[wgs84,topojson](wgs84/$REGION.topojson)" >> $MDFILE
+    #echo "[wgs84,geojson](wgs84/$REGION.geojson)" >> $MDFILE
+    #echo "[wgs84,topojson](wgs84/$REGION.topojson)" >> $MDFILE
 
     # get rijkdriehoeksstelsel (EPSG:28894)
     test ! -f "build/rd/${REGION}.json" && \
@@ -35,9 +58,17 @@ do
       || continue)
     $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.geojson" id-field=statcode precision=1
     $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.topojson" id-field=statcode precision=1
-    echo "[rd,geojson](rd/$REGION.geojson)" >> $MDFILE
-    echo "[rd,topojson](rd/$REGION.topojson)" >> $MDFILE
-    echo "" >> $MDFILE
+
+    write "| $YEAR | "
+    write_link wgs84/$REGION.geojson wgs84
+    write " , "
+    write_link "rd/$REGION.geojson" rd
+    write " | "
+    write_link "wgs84/$REGION.topojson" wgs84
+    write " , "
+    write_link "rd/$REGION.topojson" rd
+    writeline " |"
+
   done
 done
 
