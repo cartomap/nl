@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir -p build/rd
 mkdir -p build/wgs84
 
