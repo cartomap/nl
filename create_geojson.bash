@@ -28,13 +28,13 @@ echo "" > $MDFILE
 writeline "# Contents"
 writeline "" 
 
-for REGIONNAME in "provincie" "coropgebied" "gemeente" "wijk" "buurt" "arbeidsmarktregio" "brandweerregio" "ggdregio" "jeugdzorgregio" "kamervankoophandelregio""landbouwgebied" "zorgkantoorregio"
+for REGIONNAME in "provincie" "coropgebied" "gemeente" "wijk" "buurt" "arbeidsmarktregio" "brandweerregio" "ggdregio" "jeugdzorgregio" "kamervankoophandelregio" "landbouwgebied" "zorgkantoorregio" 
 do
   writeline "## $REGIONNAME" 
   writeline ""
 
-  writeline "| year | geojson | topojson |\n"
-  writeline "| --- | --- | --- |\n"
+  writeline "| year | geojson | topojson |"
+  writeline "| --- | --- | --- |"
 
   for YEAR in $(seq $YEAR_NOW -1 2003)
   do 
@@ -69,7 +69,7 @@ do
     write_link "wgs84/$REGION.topojson" wgs84
     write " , "
     write_link "rd/$REGION.topojson" rd
-    writeline " |\n"
+    writeline " | "
 
   done
 done
