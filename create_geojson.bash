@@ -1,79 +1,44 @@
 #!/bin/bash
 
+# download list of gebiedsindelingen
+test ! -f "regios.txt" &&
+  curl "https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?&request=GetCapabilities&service=WFS" > wfs.xml
+
+grep "<Title>" wfs.xml | sed -e 's/<Title>\(.*\)<[/]Title>/\1/' | sort |uniq > regios.txt
+
+cat regios.txt | grep "gegeneraliseerd" - > shapes.txt
+cat regios.txt | grep "point" - > points.txt
+
 mkdir -p build/rd
 mkdir -p build/wgs84
 
 MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
-YEAR_NOW=$(date +%Y)
+PDOKNAMES=`cat shapes.txt`
 
-MDFILE="build/index.md"
-
-write(){
-  echo -n "$1" >> $MDFILE
-}
-
-writeline(){
-  echo -e "$1" >> $MDFILE
-}
-
-write_link(){
-  if [ -a build/$1 ]; then
-    write "[$2](./$1)"
-  else
-    write "-"
-  fi
-}
-
-echo "" > $MDFILE
-writeline "# Contents"
-writeline "" 
-
-for REGIONNAME in "provincie" "coropgebied" "gemeente" "wijk" "buurt" "arbeidsmarktregio" "brandweerregio" "ggdregio" "jeugdzorgregio" "kamervankoophandelregio" "landbouwgebied" "zorgkantoorregio" 
+for TYPENAME in $PDOKNAMES 
 do
-  writeline "## $REGIONNAME" 
-  writeline ""
+  REGION=${TYPENAME/cbs_/}
+  REGION=${REGION%_*}
+  # echo $REGION
+  # continue
 
-  writeline "| year | geojson | topojson |"
-  writeline "| --- | --- | --- |"
+  # get WGS84 (EPSG:4326)
+  test ! -f "build/wgs84/${REGION}.json" && \
+    (curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json&SRSName=urn:x-ogc:def:crs:EPSG:4326" > "build/wgs84/${REGION}.json" \
+    || continue)
+  $MAPSHAPER "build/wgs84/$REGION.json" -proj wgs84 -o force "build/wgs84/$REGION.json" 
+  $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.geojson" id-field=statcode precision=0.001 
+  $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.topojson" id-field=statcode precision=0.001
 
-  for YEAR in $(seq $YEAR_NOW -1 2003)
-  do 
-    #echo "${YEAR}:" >> $MDFILE
-    REGION="${REGIONNAME}_${YEAR}"
-    echo $REGION
-
-    # get WGS84 (EPSG:4326)
-    test ! -f "build/wgs84/${REGION}.json" && \
-      (curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_${REGION}_gegeneraliseerd&outputFormat=json&SRSName=urn:x-ogc:def:crs:EPSG:4326" > "build/wgs84/${REGION}.json" \
-      || continue)
-    $MAPSHAPER "build/wgs84/$REGION.json" -proj wgs84 -o force "build/wgs84/$REGION.json" 
-    $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.geojson" id-field=statcode precision=0.001 
-    $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.topojson" id-field=statcode precision=0.001
-    
-
-    #echo "[wgs84,geojson](wgs84/$REGION.geojson)" >> $MDFILE
-    #echo "[wgs84,topojson](wgs84/$REGION.topojson)" >> $MDFILE
-
-    # get rijkdriehoeksstelsel (EPSG:28894)
-    test ! -f "build/rd/${REGION}.json" && \
-      (curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=cbs_${REGION}_gegeneraliseerd&outputFormat=json" > "build/rd/${REGION}.json" \
-      || continue)
-    $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.geojson" id-field=statcode precision=1
-    $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.topojson" id-field=statcode precision=1
-
-    write "| $YEAR | "
-    write_link wgs84/$REGION.geojson wgs84
-    write " , "
-    write_link "rd/$REGION.geojson" rd
-    write " | "
-    write_link "wgs84/$REGION.topojson" wgs84
-    write " , "
-    write_link "rd/$REGION.topojson" rd
-    writeline " | "
-
-  done
+  # get rijkdriehoeksstelsel (EPSG:28894)
+  test ! -f "build/rd/${REGION}.json" && \
+    (curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json" > "build/rd/${REGION}.json" \
+    || continue)
+  $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.geojson" id-field=statcode precision=1
+  $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.topojson" id-field=statcode precision=1 
 done
+./make_index.bash > "build/index.md"
 
 # remove all original files
-rm build/*/*.json
+#rm build/*/*.json
 
