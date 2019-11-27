@@ -37,8 +37,16 @@ do
   $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.geojson" id-field=statcode precision=1
   $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.topojson" id-field=statcode precision=1 
 done
+
 ./make_index.bash > "build/index.md"
 
 # remove all original files
-#rm build/*/*.json
+rm build/*/*.json
+
+if [ -z "$(ls -A ./build/wgs84)" ] 
+then
+  echo "Failed to build files..."
+  exit 1
+fi
+
 
