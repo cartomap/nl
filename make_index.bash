@@ -8,7 +8,7 @@ do
   echo "## $type"
   echo ""
 
-  SHAPES=$(ls build/wgs84/*.geojson | grep $type -)
+  SHAPES=$(ls build/wgs84/*.geojson | grep "/$type" -)
   if [ "$SHAPES" == "" ]; then
     continue
   fi
