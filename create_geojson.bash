@@ -15,9 +15,12 @@ mkdir -p build/wgs84
 MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
 PDOKNAMES=`cat shapes.txt`
 
-for TYPENAME in $PDOKNAMES 
-do
+#for TYPENAME in $PDOKNAMES 
+
+function get_json(){
+  TYPENAME=$1
   REGION=${TYPENAME/cbs_/}
+  MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
   REGION=${REGION%_*}
   # echo $REGION
   # continue
@@ -36,7 +39,10 @@ do
     || continue)
   $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.geojson" id-field=statcode precision=1
   $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.topojson" id-field=statcode precision=1 
-done
+}
+
+export -f get_json
+parallel get_json ::: $PDOKNAMES
 
 ./make_index.bash > "build/index.md"
 
@@ -48,5 +54,4 @@ then
   echo "Failed to build files..."
   exit 1
 fi
-
 
