@@ -2,6 +2,19 @@
 
 TYPES=`cat shapes.txt | sed 's/cbs_//' | sed 's/_[12].*//' | uniq`
 #echo $TYPES
+
+function create_url {
+  #echo "${1}"
+  for shape in $1
+  do
+    url=${shape/build/.}
+    year=${shape%.*}
+    year=${year##*_}
+    echo -n " [$year]($url)"
+  done
+  echo ""
+}
+
 for type in $TYPES
 do
   echo ""
@@ -12,29 +25,20 @@ do
   if [ "$SHAPES" == "" ]; then
     continue
   fi
-  
-  echo "### wgs84"
-  echo -n " - geojson: "
-  
-  for shape in $SHAPES
-  do
-    url=${shape/build/.}
-    year=${shape%.*}
-    year=${year##*_}
-    echo -n " [$year]($url)"
-  done
-  echo ""
 
-  SHAPES=$(ls build/wgs84/*.topojson | grep $type -)
-  echo -n " - topojson: "
+  echo ""
+  echo "### wgs84"
+  echo ""
   
-  for shape in $SHAPES
-  do
-    url=${shape/build/.}
-    year=${shape%.*}
-    year=${year##*_}
-    echo -n " [$year]($url)"
-  done
+  echo ""
+  echo -n " - geojson: "
+  create_url "$SHAPES" 
+  echo ""
+  
+  SHAPES=$(ls build/wgs84/*.topojson | grep $type -)
+  echo ""
+  echo -n " - topojson: "
+  create_url "$SHAPES" 
   echo ""
 
   SHAPES=$(ls -A build/rd/*.geojson | grep "/$type" -)
@@ -44,27 +48,19 @@ do
   
   echo "" 
   echo "### rijksdriehoekstelsel (28994)"
-  echo -n " - geojson: "
+  echo ""
   
-  for shape in $SHAPES
-  do
-    url=${shape/build/.}
-    year=${shape%.*}
-    year=${year##*_}
-    echo -n " [$year]($url)"
-  done
+  echo ""
+  echo -n " - geojson: "
+  create_url "$SHAPES" 
+  echo ""
+  
+  SHAPES=$(ls build/rd/*.topojson | grep $type -)
+  echo ""
+  echo -n " - topojson: "
+  create_url "$SHAPES" 
   echo ""
 
-  SHAPES=$(ls build/rd/*.topojson | grep $type -)
-  echo -n " - topojson: "
-  
-  for shape in $SHAPES
-  do
-    url=${shape/build/.}
-    year=${shape%.*}
-    year=${year##*_}
-    echo -n " [$year]($url)"
-  done
-  echo ""
 done
+
 echo ""
