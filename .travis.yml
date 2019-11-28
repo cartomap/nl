@@ -1,6 +1,12 @@
+language: node_js
+nodejs:
+  - 8
+
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  keep_history: true
+  local_dir: build
   on:
-    branch: master
+    branch: working

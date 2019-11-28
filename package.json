@@ -1,0 +1,19 @@
+{
+  "name": "cartomap_nl",
+  "version": "0.9.0",
+  "description": "generate geojson map for NL",
+  "main": "index.js",
+  "repository": "git@github.com:cartomap/nl",
+  "author": "Edwin de Jonge <edwindjonge@gmail.com>",
+  "license": "GPL-2",
+  "scripts":{
+     "test": "./create_geojson.bash"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/cartmap/nl.git"
+  },
+  "dependencies": {
+    "mapshaper": "^0.4.120"
+  }
+}
