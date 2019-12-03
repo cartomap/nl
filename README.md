@@ -30,4 +30,4 @@ Bijvoorbeeld de _gemeente_ kaart van _2016_ met _rijksdriehoekstel_ projectie in
 
 https://cartomap.github.io/nl/rd/gemeente_2016.topojson
 
-Kijk voor een overzichtvan de kaarten op https://cartomap.github.io/nl. 
+Kijk voor een overzichtvan de kaarten op https://cartomap.github.io/nl of https://github.com/cartomap/nl/tree/gh-pages/wgs84
