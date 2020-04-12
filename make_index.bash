@@ -47,7 +47,7 @@ do
   fi
   
   echo "" 
-  echo "### rijksdriehoekstelsel (28994)"
+  echo "### rijksdriehoeksstelsel (28992)"
   echo ""
   
   echo ""

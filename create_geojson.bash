@@ -30,7 +30,7 @@ do
   $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.geojson" id-field=statcode precision=0.001 
   $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.topojson" id-field=statcode precision=0.001
 
-  # get rijkdriehoeksstelsel (EPSG:28894)
+  # get rijksdriehoeksstelsel (EPSG:28992)
   test ! -f "build/rd/${REGION}.json" && \
     (curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json" > "build/rd/${REGION}.json" \
     || continue)
