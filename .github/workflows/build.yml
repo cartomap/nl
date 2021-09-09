@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Build and deploy
 
 # Controls when the workflow will run
@@ -9,7 +7,9 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
+  schedule:
+      # * at the first of the month this will be run to update the files
+      - cron:  '30 3 1 * *'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
