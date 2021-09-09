@@ -34,35 +34,9 @@ jobs:
       - name: Build and simplify maps
         run: ./create_geojson.bash
       
-      - name: Deploy to github pages
-        # You may pin to the exact commit or the version.
-        # uses: crazy-max/ghaction-github-pages@db4476a01402e1a7ce05f41832040eef16d14925
-        uses: crazy-max/ghaction-github-pages@v2.5.0
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          # Git domain (default github.com)
-          # domain: # optional, default is github.com
-          # GitHub repository where assets will be deployed (default $GITHUB_REPOSITORY)
-          # repo: # optional
-          # Git branch where assets will be deployed
-          # target_branch: # optional, default is gh-pages
-          # Create incremental commit instead of doing push force
-          # keep_history: # optional, default is false
-          # Allow an empty commit to be created
-          # allow_empty_commit: # optional, default is true
-          # Build directory to deploy
-          build_dir: "build"
-          # The committer name and email address
-          #committer: # optional
-          # The author name and email address
-          #author: # optional
-          # Commit message
-          #commit_message: # optional
-          # Write the given domain name to the CNAME file
-          #fqdn: # optional
-          # Allow Jekyll to build your site
-          #jekyll: # optional, default is true
-          # If enabled, nothing will be pushed
-          #dry_run: # optional, default is false
-          # Enable verbose output
-          #verbose: # optional, default is false
-      
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
+  
