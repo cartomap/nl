@@ -13,8 +13,8 @@ mkdir -p build/rd
 mkdir -p build/wgs84
 
 MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
-PDOKNAMES=`head shapes.txt -n 1`
-#PDOKNAMES=`cat shapes.txt`
+#PDOKNAMES=`head shapes.txt -n 1`
+PDOKNAMES=`cat shapes.txt`
 
 for TYPENAME in $PDOKNAMES 
 do
