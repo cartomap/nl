@@ -31,7 +31,7 @@ jobs:
       - run: npm install
 
       # Runs a single command using the runners shell
-      - name: Build maps
+      - name: Build and simplify maps
         run: ./create_geojson.bash
       
       - name: Deploy to github pages

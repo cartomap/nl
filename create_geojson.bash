@@ -6,7 +6,7 @@ test ! -f "regios.txt" &&
 
 grep "<Title>" wfs.xml | sed -e 's/<Title>\(.*\)<[/]Title>/\1/' | sort |uniq > regios.txt
 
-cat regios.txt | grep "gegeneraliseerd" - > shapes.txt
+cat regios.txt | grep -P '(?<!niet_)gegeneraliseerd' - > shapes.txt
 cat regios.txt | grep "point" - > points.txt
 
 mkdir -p build/rd
