@@ -5,7 +5,7 @@ mkdir -p build/wgs84
 mkdir -p build/toc
 
 THISYEAR=`date +%Y`
-BEGINYEAR=2015
+BEGINYEAR=1995
 JAREN=`eval echo "{$THISYEAR..$BEGINYEAR}"`
 #echo "JAREN: $JAREN"
 
@@ -79,6 +79,7 @@ do
     $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$GEOJSON" id-field=statcode precision=1 
     $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$TOPOJSON" id-field=statcode precision=1
   done
+  rm build/*/*.json
 done 
 
 echo "Generating index.md..."
@@ -86,7 +87,6 @@ echo "Generating index.md..."
 
 
 # remove all original files
-rm build/*/*.json
 rm -rf build/toc
 
 if [ -z "$(ls -A ./build/wgs84)" ] 
@@ -94,5 +94,3 @@ then
   echo "Failed to build files..."
   exit 1
 fi
-
-
