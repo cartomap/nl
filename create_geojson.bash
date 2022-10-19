@@ -7,7 +7,9 @@ mkdir -p build/toc
 THISYEAR=`date +%Y`
 #THISYEAR=2015
 BEGINYEAR=2015
-for JAAR in $(seq $THISYEAR $BEGINYEAR)
+JAREN=`seq $THISYEAR $BEGINYEAR`
+echo "JAREN: $JAREN"
+for JAAR in $JAREN
 do
   REGIOTXT=build/toc/regios_$JAAR.txt
   SHAPESTXT=build/toc/shapes_$JAAR.txt
