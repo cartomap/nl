@@ -28,6 +28,8 @@ https://cartomap.github.io/nl/<projectie>/<regio>_<jaar>.<formaat>
 ```
 Bijvoorbeeld de _gemeente_ kaart van _2016_ met _rijksdriehoekstel_ projectie in _topojson_ formaat  is:
 
+```
 https://cartomap.github.io/nl/rd/gemeente_2016.topojson
+```
 
 Kijk voor een overzichtvan de kaarten op https://cartomap.github.io/nl of https://github.com/cartomap/nl/tree/gh-pages/wgs84

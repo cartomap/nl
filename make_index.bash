@@ -1,7 +1,7 @@
 #!/bin/bash
 
-TYPES=`cat shapes.txt | sed 's/cbs_//' | sed 's/_[12].*//' | uniq`
-#echo $TYPES
+SHAPESTXT=`ls ./build/toc/shapes*.txt`
+TYPES=`cat $SHAPESTXT | sort | uniq | sed 's/_gegeneraliseerd//'`
 
 function create_url {
   #echo "${1}"
@@ -14,6 +14,9 @@ function create_url {
   done
   echo ""
 }
+
+# kopieer README 
+head -n 34 README.md
 
 for type in $TYPES
 do

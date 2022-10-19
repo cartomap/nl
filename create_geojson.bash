@@ -1,48 +1,70 @@
 #!/bin/bash
 
-# download list of gebiedsindelingen
-test ! -f "regios.txt" &&
-  curl "https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?&request=GetCapabilities&service=WFS" > wfs.xml
-
-grep "<Title>" wfs.xml | sed -e 's/<Title>\(.*\)<[/]Title>/\1/' | sort |uniq > regios.txt
-
-cat regios.txt | grep -P '(?<!niet_)gegeneraliseerd' - > shapes.txt
-cat regios.txt | grep "point" - > points.txt
-
 mkdir -p build/rd
 mkdir -p build/wgs84
+mkdir -p build/toc
 
-MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
-#PDOKNAMES=`head shapes.txt -n 1`
-PDOKNAMES=`cat shapes.txt`
-
-for TYPENAME in $PDOKNAMES 
+THISYEAR=`date +%Y`
+#THISYEAR=2015
+BEGINYEAR=2015
+for JAAR in $(seq $THISYEAR $BEGINYEAR)
 do
-  REGION=${TYPENAME/cbs_/}
-  REGION=${REGION%_*}
-  # echo $REGION
-  # continue
+  REGIOTXT=build/toc/regios_$JAAR.txt
+  SHAPESTXT=build/toc/shapes_$JAAR.txt
+  POINTSTXT=build/toc/points_$JAAR.txt
+  WFS=https://service.pdok.nl/cbs/gebiedsindelingen/$JAAR/wfs/v1_0
+  TOC=build/toc/wfs_$JAAR.xml
+  
+  # a list of gebiedsindelingen
+  test ! -f "$REGIOTXT" &&
+    curl "$WFS?&request=GetCapabilities&service=WFS" > $TOC
+  
+  grep "<Title>" $TOC | sed -e 's/.*<Title>\(.*\)<[/]Title>/\1/' | sort |uniq > $REGIOTXT
+  
+  cat $REGIOTXT | grep  '_gegeneraliseerd' | grep -v '_niet_' - > $SHAPESTXT
+  cat $REGIOTXT | grep "point" - > $POINTSTXT
+  
+  MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
+  #PDOKNAMES=`head -n 1 $SHAPESTXT`
+  PDOKNAMES=`cat $SHAPESTXT`
+  
+  for TYPENAME in $PDOKNAMES 
+  do
+    REGION=${TYPENAME/cbs_/}
+    REGION=${REGION%_*}_$JAAR
+  
+    JSON="build/wgs84/$REGION.json"
+    GEOJSON="build/wgs84/$REGION.geojson"
+    TOPOJSON="build/wgs84/$REGION.topojson"
+  
+    # get WGS84 (EPSG:4326)
+    test ! -f "$JSON" && \
+      (curl "$WFS?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json&srsName=urn:ogc:def:crs:EPSG::4326" > $JSON \
+      || continue)
+    $MAPSHAPER $JSON -proj wgs84 -o force $JSON 
+    $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$GEOJSON" id-field=statcode precision=0.001 
+    $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$TOPOJSON" id-field=statcode precision=0.001
+  
+    # get rijksdriehoeksstelsel (EPSG:28992)
+    JSON="build/rd/$REGION.json"
+    GEOJSON="build/rd/$REGION.geojson"
+    TOPOJSON="build/rd/$REGION.topojson"
+     test ! -f "$JSON" && \
+      (curl "$WFS?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json&SRSName=urn:ogc:def:crs:EPSG::28992" > $JSON \
+      || continue)
+    $MAPSHAPER "$JSON" -proj wgs84 -o force "$JSON" 
+    $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$GEOJSON" id-field=statcode precision=1 
+    $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$TOPOJSON" id-field=statcode precision=1
+  done
+done 
 
-  # get WGS84 (EPSG:4326)
-  test ! -f "build/wgs84/${REGION}.json" && \
-    (curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json&SRSName=urn:x-ogc:def:crs:EPSG:4326" > "build/wgs84/${REGION}.json" \
-    || continue)
-  $MAPSHAPER "build/wgs84/$REGION.json" -proj wgs84 -o force "build/wgs84/$REGION.json" 
-  $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.geojson" id-field=statcode precision=0.001 
-  $MAPSHAPER "build/wgs84/$REGION.json" -simplify 10% keep-shapes -o "build/wgs84/$REGION.topojson" id-field=statcode precision=0.001
-
-  # get rijksdriehoeksstelsel (EPSG:28992)
-  test ! -f "build/rd/${REGION}.json" && \
-    (curl "http://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json" > "build/rd/${REGION}.json" \
-    || continue)
-  $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.geojson" id-field=statcode precision=1
-  $MAPSHAPER "build/rd/$REGION.json" -simplify 10% keep-shapes -o "build/rd/$REGION.topojson" id-field=statcode precision=1 
-done
-
+echo "Generating index.md..."
 ./make_index.bash > "build/index.md"
+
 
 # remove all original files
 rm build/*/*.json
+rm -rf build/toc
 
 if [ -z "$(ls -A ./build/wgs84)" ] 
 then
