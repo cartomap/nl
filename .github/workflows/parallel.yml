@@ -16,9 +16,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "mapshaper"
+  strategy:
+    matrix: 
+      - jaar: [2019, 2005]
   mapshaper:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -32,7 +36,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build and simplify maps
-        run: ./create_geojson_year.bash 2019
+        run: ./create_geojson_year.bash ${{matrix.jaar}}
 
       - uses: actions/upload-artifact@v3
         with:
@@ -52,6 +56,7 @@ jobs:
         with:
           node-version: '18'
       - run: yarn
+
       - uses: actions/download-artifact@v3
         with:
           name: build
