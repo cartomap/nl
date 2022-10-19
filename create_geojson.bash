@@ -7,7 +7,7 @@ mkdir -p build/toc
 THISYEAR=`date +%Y`
 #THISYEAR=2015
 BEGINYEAR=2015
-JAREN=`seq $THISYEAR $BEGINYEAR`
+JAREN=`eval echo "{$THISYEAR..$BEGINYEAR}"`
 echo "JAREN: $JAREN"
 for JAAR in $JAREN
 do
