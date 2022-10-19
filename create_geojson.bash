@@ -5,10 +5,10 @@ mkdir -p build/wgs84
 mkdir -p build/toc
 
 THISYEAR=`date +%Y`
-#THISYEAR=2015
 BEGINYEAR=2015
 JAREN=`eval echo "{$THISYEAR..$BEGINYEAR}"`
-echo "JAREN: $JAREN"
+#echo "JAREN: $JAREN"
+
 for JAAR in $JAREN
 do
   REGIOTXT=build/toc/regios_$JAAR.txt
@@ -38,23 +38,44 @@ do
     JSON="build/wgs84/$REGION.json"
     GEOJSON="build/wgs84/$REGION.geojson"
     TOPOJSON="build/wgs84/$REGION.topojson"
-  
+
+   
+    # pdok kapt de grootte van downloads op 1000 af
+    SIZE=`curl "$WFS?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&resultType=hits" \
+	| grep numberMatch | sed 's/.*numberMatched="//' | sed 's/".*//'`
+
+    STEPS=`seq 0 1000 $SIZE`
+    PARTS=""
     # get WGS84 (EPSG:4326)
-    test ! -f "$JSON" && \
-      (curl "$WFS?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json&srsName=urn:ogc:def:crs:EPSG::4326" > $JSON \
-      || continue)
-    $MAPSHAPER $JSON -proj wgs84 -o force $JSON 
-    $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$GEOJSON" id-field=statcode precision=0.001 
-    $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$TOPOJSON" id-field=statcode precision=0.001
+    for STARTINDEX in $STEPS
+    do
+      PART="build/wgs84/${REGION}_${STARTINDEX}.json"
+      curl "$WFS?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json&srsName=urn:ogc:def:crs:EPSG::4326&STARTINDEX=$STARTINDEX" > $PART
+      PARTS="$PARTS $PART"
+    done
+    echo "**** PARTS=$PARTS"
+    $MAPSHAPER -i $PARTS combine-files \
+	       -merge-layers \
+	       -o force $JSON 
+    $MAPSHAPER $JSON -simplify 10% keep-shapes -o "$GEOJSON" id-field=statcode precision=0.001 
+    $MAPSHAPER $JSON -simplify 10% keep-shapes -o "$TOPOJSON" id-field=statcode precision=0.001
   
     # get rijksdriehoeksstelsel (EPSG:28992)
     JSON="build/rd/$REGION.json"
     GEOJSON="build/rd/$REGION.geojson"
     TOPOJSON="build/rd/$REGION.topojson"
-     test ! -f "$JSON" && \
-      (curl "$WFS?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json&SRSName=urn:ogc:def:crs:EPSG::28992" > $JSON \
-      || continue)
-    $MAPSHAPER "$JSON" -proj wgs84 -o force "$JSON" 
+
+    PARTS=""
+    for STARTINDEX in $STEPS
+    do
+      PART="build/rd/${REGION}_${STARTINDEX}.json"
+      curl "$WFS?request=GetFeature&service=WFS&version=2.0.0&typeName=${TYPENAME}&outputFormat=json&srsName=urn:ogc:def:crs:EPSG::28992&STARTINDEX=$STARTINDEX" > $PART
+      PARTS="$PARTS $PART"
+    done
+    echo "**** PARTS=$PARTS"
+    $MAPSHAPER -i $PARTS combine-files \
+	       -merge-layers \
+	       -o force $JSON 
     $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$GEOJSON" id-field=statcode precision=1 
     $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$TOPOJSON" id-field=statcode precision=1
   done
