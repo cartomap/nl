@@ -4,9 +4,9 @@ name: Build and deploy in parallel
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [ parallel ]
   pull_request:
-    branches: [ master ]
+    branches: [ parallel ]
   schedule:
       # * at the first of the month this will be run to update the files
       - cron:  '30 3 1 * *'
