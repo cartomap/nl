@@ -83,8 +83,8 @@ rm build/*/*.json
 # remove all original files
 rm -rf build/toc
 
-if [ -z "$(ls -A ./build/wgs84)" ] 
-then
-  echo "Failed to build files..."
-  exit 1
-fi
+# if [ -z "$(ls -A ./build/wgs84)" ] 
+# then
+#   echo "Failed to build files..."
+#   exit 1
+# fi
