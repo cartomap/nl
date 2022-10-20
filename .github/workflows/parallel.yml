@@ -63,7 +63,7 @@ jobs:
           path: build
 
       - name: maak de index
-        run: ./make_index.bash
+        run: ./make_index.bash > build/index.md
 
       - name: inhoud van de directory
         run: ls
