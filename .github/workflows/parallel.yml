@@ -60,13 +60,16 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: build
+          path: build
 
       - name: maak de index
         run: ./make_index.bash
 
       - name: inhoud van de directory
-        run: ls -R
+        run: ls
 
+      - name: inhoud van de directory
+        run: ls -R build
       # - name: Deploy 🚀
       #   uses: JamesIves/github-pages-deploy-action@4.1.5
       #   with:
