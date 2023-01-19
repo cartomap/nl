@@ -8,19 +8,19 @@ geschikt voor cartografische toepassingen van NL op landsniveau. Ze zijn minder 
 
 Er worden twee projecties aangeboden, die voor de meeste toepassingen voldoen:
  
-- de map `rd` bevat rijkdriehoekstelsprojecties, dat is de standaard kaartprojectie voor NL.
-- de map `wgs84` bevat de standaardprojectie voor Webcartografie zoals Google Maps, Bing maps, Leaflet, Open street map en andere. 
+- de map `rd` bevat rijkdriehoekstelsprojecties ([EPSG:28992](https://epsg.io/28992)), dat is de standaard kaartprojectie voor NL.
+- de map `wgs84` ([EPSG:4326](https://epsg.io/4326)) bevat de standaardprojectie voor Webcartografie zoals Google Maps, Bing maps, Leaflet, Open street map en andere. 
 
 ## Formaten
 
 De kaarten zijn beschikbaar in twee formaten:
 
 - `geojson` een standaard voor het opslaan van geo data in JSON formaat
-- `topojson` een compacter variant, die veel ondersteund wordt (maar niet zoveel als geojson).
+- `topojson` een compactere variant, die veel ondersteund wordt (maar niet zoveel als geojson).
 
 # Gebruik
 
-De kaarten kunnen gedownload worden, maar kunnen ook direct gebruikt worden op webpaginaś. 
+De kaarten kunnen gedownload worden, maar kunnen ook direct gebruikt worden op webpagina's. 
 Gebruik hiervoor een url die op de volgend wijze is opgebouwd:
 
 ```

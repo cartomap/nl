@@ -30,7 +30,7 @@ do
   fi
 
   echo ""
-  echo "### wgs84"
+  echo "### wgs84 (EPSG:4326)"
   echo ""
   
   echo ""
@@ -50,7 +50,7 @@ do
   fi
   
   echo "" 
-  echo "### rijksdriehoeksstelsel (28992)"
+  echo "### rd (EPSG:28992)"
   echo ""
   
   echo ""
@@ -66,6 +66,7 @@ do
 
 done
 
+# maybe move the next line to the workflow script?
 rm -rf ./build/toc
 
 echo ""
