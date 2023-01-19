@@ -23,8 +23,8 @@ cat $REGIOTXT | grep  '_gegeneraliseerd' | grep -v '_niet_' - > $SHAPESTXT
 cat $REGIOTXT | grep "point" - > $POINTSTXT
 
 MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
-#PDOKNAMES=`head -n 1 $SHAPESTXT`
-PDOKNAMES=`cat $SHAPESTXT`
+PDOKNAMES=`head -n 1 $SHAPESTXT`
+#PDOKNAMES=`cat $SHAPESTXT`
 
 for TYPENAME in $PDOKNAMES 
 do
