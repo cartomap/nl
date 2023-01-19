@@ -66,4 +66,6 @@ do
 
 done
 
+rm -rf ./build/toc
+
 echo ""

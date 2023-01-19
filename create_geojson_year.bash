@@ -81,7 +81,7 @@ rm build/*/*.json
 #./make_index.bash > "build/index.md"
 
 # remove all original files
-rm -rf build/toc
+# rm -rf build/toc
 
 # if [ -z "$(ls -A ./build/wgs84)" ] 
 # then
