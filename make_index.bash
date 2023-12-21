@@ -30,7 +30,7 @@ do
   fi
 
   echo ""
-  echo "### wgs84"
+  echo "### wgs84 (EPSG:4326)"
   echo ""
   
   echo ""
@@ -44,14 +44,14 @@ do
   create_url "$SHAPES" 
   echo ""
 
+  echo "" 
+  echo "### rijksdriehoeksstelsel (EPSG:28992)"
+  echo ""
+
   SHAPES=$(ls -A build/rd/*.geojson | grep "/$type" -)
   if [ "$SHAPES" == "" ]; then
     continue
   fi
-  
-  echo "" 
-  echo "### rijksdriehoeksstelsel (28992)"
-  echo ""
   
   echo ""
   echo -n " - geojson: "

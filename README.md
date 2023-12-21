@@ -1,6 +1,6 @@
 # Cartografisch kaarten voor NL
 
-Deze git repository bevat kaarten van [PDOK](http://www.pdok.nl), afkomstig van het [CBS](http://www.cbs.nl). 
+Deze [git repository](https://github.com/cartomap/nl) bevat kaarten van [PDOK](http://www.pdok.nl), afkomstig van het [CBS](http://www.cbs.nl). 
 De kaarten zijn gesimplificeerd met [mapshaper](http://mapshaper.org) om compacter te zijn en zijn daarom vooral 
 geschikt voor cartografische toepassingen van NL op landsniveau. Ze zijn minder geschikt voor applicaties die inzoomen, omdat ze minder nauwkeurig zijn.
 
@@ -8,8 +8,8 @@ geschikt voor cartografische toepassingen van NL op landsniveau. Ze zijn minder 
 
 Er worden twee projecties aangeboden, die voor de meeste toepassingen voldoen:
  
-- de map `rd` bevat rijkdriehoekstelsprojecties, dat is de standaard kaartprojectie voor NL.
-- de map `wgs84` bevat de standaardprojectie voor Webcartografie zoals Google Maps, Bing maps, Leaflet, Open street map en andere. 
+- de map `rd` (EPSG:28992) bevat rijkdriehoekstelsprojecties, dat is de standaard kaartprojectie voor NL.
+- de map `wgs84` (EPSG:4326) bevat de standaardprojectie voor Webcartografie zoals Google Maps, Bing maps, Leaflet, Open street map en andere. 
 
 ## Formaten
 
