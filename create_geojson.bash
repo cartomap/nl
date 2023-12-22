@@ -85,6 +85,9 @@ done
 echo "Generating index.md..."
 ./make_index.bash > "build/index.md"
 
+echo "Generating index.csv"
+./make_index_csv.bash > "build/index.csv"
+
 
 # remove all original files
 rm -rf build/toc

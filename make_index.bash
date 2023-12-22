@@ -3,7 +3,7 @@
 SHAPESTXT=`ls ./build/toc/shapes*.txt`
 TYPES=`cat $SHAPESTXT | sort | uniq | sed 's/_gegeneraliseerd//'`
 
-function create_url {
+function create_url(){
   #echo "${1}"
   for shape in $1
   do
