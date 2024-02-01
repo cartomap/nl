@@ -112,6 +112,7 @@ coropgebied,2020,https://cartomap.github.io/nl/wgs84/coropgebied_2020.geojson,ht
 coropgebied,2021,https://cartomap.github.io/nl/wgs84/coropgebied_2021.geojson,https://cartomap.github.io/nl/rd/coropgebied_2021.geojson
 coropgebied,2022,https://cartomap.github.io/nl/wgs84/coropgebied_2022.geojson,https://cartomap.github.io/nl/rd/coropgebied_2022.geojson
 coropgebied,2023,https://cartomap.github.io/nl/wgs84/coropgebied_2023.geojson,https://cartomap.github.io/nl/rd/coropgebied_2023.geojson
+coropgebied,2024,https://cartomap.github.io/nl/wgs84/coropgebied_2024.geojson,https://cartomap.github.io/nl/rd/coropgebied_2024.geojson
 coropplusgebied,2005,https://cartomap.github.io/nl/wgs84/coropplusgebied_2005.geojson,https://cartomap.github.io/nl/rd/coropplusgebied_2005.geojson
 coropplusgebied,2006,https://cartomap.github.io/nl/wgs84/coropplusgebied_2006.geojson,https://cartomap.github.io/nl/rd/coropplusgebied_2006.geojson
 coropplusgebied,2007,https://cartomap.github.io/nl/wgs84/coropplusgebied_2007.geojson,https://cartomap.github.io/nl/rd/coropplusgebied_2007.geojson
@@ -131,6 +132,7 @@ coropplusgebied,2020,https://cartomap.github.io/nl/wgs84/coropplusgebied_2020.ge
 coropplusgebied,2021,https://cartomap.github.io/nl/wgs84/coropplusgebied_2021.geojson,https://cartomap.github.io/nl/rd/coropplusgebied_2021.geojson
 coropplusgebied,2022,https://cartomap.github.io/nl/wgs84/coropplusgebied_2022.geojson,https://cartomap.github.io/nl/rd/coropplusgebied_2022.geojson
 coropplusgebied,2023,https://cartomap.github.io/nl/wgs84/coropplusgebied_2023.geojson,https://cartomap.github.io/nl/rd/coropplusgebied_2023.geojson
+coropplusgebied,2024,https://cartomap.github.io/nl/wgs84/coropplusgebied_2024.geojson,https://cartomap.github.io/nl/rd/coropplusgebied_2024.geojson
 coropsubgebied,1995,https://cartomap.github.io/nl/wgs84/coropsubgebied_1995.geojson,https://cartomap.github.io/nl/rd/coropsubgebied_1995.geojson
 coropsubgebied,1996,https://cartomap.github.io/nl/wgs84/coropsubgebied_1996.geojson,https://cartomap.github.io/nl/rd/coropsubgebied_1996.geojson
 coropsubgebied,1997,https://cartomap.github.io/nl/wgs84/coropsubgebied_1997.geojson,https://cartomap.github.io/nl/rd/coropsubgebied_1997.geojson
@@ -160,6 +162,7 @@ coropsubgebied,2020,https://cartomap.github.io/nl/wgs84/coropsubgebied_2020.geoj
 coropsubgebied,2021,https://cartomap.github.io/nl/wgs84/coropsubgebied_2021.geojson,https://cartomap.github.io/nl/rd/coropsubgebied_2021.geojson
 coropsubgebied,2022,https://cartomap.github.io/nl/wgs84/coropsubgebied_2022.geojson,https://cartomap.github.io/nl/rd/coropsubgebied_2022.geojson
 coropsubgebied,2023,https://cartomap.github.io/nl/wgs84/coropsubgebied_2023.geojson,https://cartomap.github.io/nl/rd/coropsubgebied_2023.geojson
+coropsubgebied,2024,https://cartomap.github.io/nl/wgs84/coropsubgebied_2024.geojson,https://cartomap.github.io/nl/rd/coropsubgebied_2024.geojson
 gemeente,1995,https://cartomap.github.io/nl/wgs84/gemeente_1995.geojson,https://cartomap.github.io/nl/rd/gemeente_1995.geojson
 gemeente,1996,https://cartomap.github.io/nl/wgs84/gemeente_1996.geojson,https://cartomap.github.io/nl/rd/gemeente_1996.geojson
 gemeente,1997,https://cartomap.github.io/nl/wgs84/gemeente_1997.geojson,https://cartomap.github.io/nl/rd/gemeente_1997.geojson
@@ -189,6 +192,7 @@ gemeente,2020,https://cartomap.github.io/nl/wgs84/gemeente_2020.geojson,https://
 gemeente,2021,https://cartomap.github.io/nl/wgs84/gemeente_2021.geojson,https://cartomap.github.io/nl/rd/gemeente_2021.geojson
 gemeente,2022,https://cartomap.github.io/nl/wgs84/gemeente_2022.geojson,https://cartomap.github.io/nl/rd/gemeente_2022.geojson
 gemeente,2023,https://cartomap.github.io/nl/wgs84/gemeente_2023.geojson,https://cartomap.github.io/nl/rd/gemeente_2023.geojson
+gemeente,2024,https://cartomap.github.io/nl/wgs84/gemeente_2024.geojson,https://cartomap.github.io/nl/rd/gemeente_2024.geojson
 ggdregio,1995,https://cartomap.github.io/nl/wgs84/ggdregio_1995.geojson,https://cartomap.github.io/nl/rd/ggdregio_1995.geojson
 ggdregio,1996,https://cartomap.github.io/nl/wgs84/ggdregio_1996.geojson,https://cartomap.github.io/nl/rd/ggdregio_1996.geojson
 ggdregio,1997,https://cartomap.github.io/nl/wgs84/ggdregio_1997.geojson,https://cartomap.github.io/nl/rd/ggdregio_1997.geojson
@@ -346,6 +350,7 @@ landsdeel,2020,https://cartomap.github.io/nl/wgs84/landsdeel_2020.geojson,https:
 landsdeel,2021,https://cartomap.github.io/nl/wgs84/landsdeel_2021.geojson,https://cartomap.github.io/nl/rd/landsdeel_2021.geojson
 landsdeel,2022,https://cartomap.github.io/nl/wgs84/landsdeel_2022.geojson,https://cartomap.github.io/nl/rd/landsdeel_2022.geojson
 landsdeel,2023,https://cartomap.github.io/nl/wgs84/landsdeel_2023.geojson,https://cartomap.github.io/nl/rd/landsdeel_2023.geojson
+landsdeel,2024,https://cartomap.github.io/nl/wgs84/landsdeel_2024.geojson,https://cartomap.github.io/nl/rd/landsdeel_2024.geojson
 nuts1,2003,https://cartomap.github.io/nl/wgs84/nuts1_2003.geojson,https://cartomap.github.io/nl/rd/nuts1_2003.geojson
 nuts1,2006,https://cartomap.github.io/nl/wgs84/nuts1_2006.geojson,https://cartomap.github.io/nl/rd/nuts1_2006.geojson
 nuts1,2010,https://cartomap.github.io/nl/wgs84/nuts1_2010.geojson,https://cartomap.github.io/nl/rd/nuts1_2010.geojson
@@ -409,6 +414,7 @@ provincie,2020,https://cartomap.github.io/nl/wgs84/provincie_2020.geojson,https:
 provincie,2021,https://cartomap.github.io/nl/wgs84/provincie_2021.geojson,https://cartomap.github.io/nl/rd/provincie_2021.geojson
 provincie,2022,https://cartomap.github.io/nl/wgs84/provincie_2022.geojson,https://cartomap.github.io/nl/rd/provincie_2022.geojson
 provincie,2023,https://cartomap.github.io/nl/wgs84/provincie_2023.geojson,https://cartomap.github.io/nl/rd/provincie_2023.geojson
+provincie,2024,https://cartomap.github.io/nl/wgs84/provincie_2024.geojson,https://cartomap.github.io/nl/rd/provincie_2024.geojson
 regionaalmeld_coordinatiepunt,2017,https://cartomap.github.io/nl/wgs84/regionaalmeld_coordinatiepunt_2017.geojson,https://cartomap.github.io/nl/rd/regionaalmeld_coordinatiepunt_2017.geojson
 regionaalmeld_coordinatiepunt,2018,https://cartomap.github.io/nl/wgs84/regionaalmeld_coordinatiepunt_2018.geojson,https://cartomap.github.io/nl/rd/regionaalmeld_coordinatiepunt_2018.geojson
 regionaalmeld_coordinatiepunt,2019,https://cartomap.github.io/nl/wgs84/regionaalmeld_coordinatiepunt_2019.geojson,https://cartomap.github.io/nl/rd/regionaalmeld_coordinatiepunt_2019.geojson
