@@ -13,6 +13,6 @@
     "test": "./create_geojson.bash"
   },
   "dependencies": {
-    "mapshaper": "^0.4.120"
+    "mapshaper": "^0.6.44"
   }
 }
