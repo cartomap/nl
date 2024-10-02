@@ -9,6 +9,7 @@ arbeidsmarktregio,2020,https://cartomap.github.io/nl/wgs84/arbeidsmarktregio_202
 arbeidsmarktregio,2021,https://cartomap.github.io/nl/wgs84/arbeidsmarktregio_2021.geojson,https://cartomap.github.io/nl/rd/arbeidsmarktregio_2021.geojson
 arbeidsmarktregio,2022,https://cartomap.github.io/nl/wgs84/arbeidsmarktregio_2022.geojson,https://cartomap.github.io/nl/rd/arbeidsmarktregio_2022.geojson
 arbeidsmarktregio,2023,https://cartomap.github.io/nl/wgs84/arbeidsmarktregio_2023.geojson,https://cartomap.github.io/nl/rd/arbeidsmarktregio_2023.geojson
+arbeidsmarktregio,2024,https://cartomap.github.io/nl/wgs84/arbeidsmarktregio_2024.geojson,https://cartomap.github.io/nl/rd/arbeidsmarktregio_2024.geojson
 arrondissementsgebied,1995,https://cartomap.github.io/nl/wgs84/arrondissementsgebied_1995.geojson,https://cartomap.github.io/nl/rd/arrondissementsgebied_1995.geojson
 arrondissementsgebied,1996,https://cartomap.github.io/nl/wgs84/arrondissementsgebied_1996.geojson,https://cartomap.github.io/nl/rd/arrondissementsgebied_1996.geojson
 arrondissementsgebied,1997,https://cartomap.github.io/nl/wgs84/arrondissementsgebied_1997.geojson,https://cartomap.github.io/nl/rd/arrondissementsgebied_1997.geojson
@@ -38,6 +39,7 @@ arrondissementsgebied,2020,https://cartomap.github.io/nl/wgs84/arrondissementsge
 arrondissementsgebied,2021,https://cartomap.github.io/nl/wgs84/arrondissementsgebied_2021.geojson,https://cartomap.github.io/nl/rd/arrondissementsgebied_2021.geojson
 arrondissementsgebied,2022,https://cartomap.github.io/nl/wgs84/arrondissementsgebied_2022.geojson,https://cartomap.github.io/nl/rd/arrondissementsgebied_2022.geojson
 arrondissementsgebied,2023,https://cartomap.github.io/nl/wgs84/arrondissementsgebied_2023.geojson,https://cartomap.github.io/nl/rd/arrondissementsgebied_2023.geojson
+arrondissementsgebied,2024,https://cartomap.github.io/nl/wgs84/arrondissementsgebied_2024.geojson,https://cartomap.github.io/nl/rd/arrondissementsgebied_2024.geojson
 brandweerregio,1995,https://cartomap.github.io/nl/wgs84/brandweerregio_1995.geojson,https://cartomap.github.io/nl/rd/brandweerregio_1995.geojson
 brandweerregio,1996,https://cartomap.github.io/nl/wgs84/brandweerregio_1996.geojson,https://cartomap.github.io/nl/rd/brandweerregio_1996.geojson
 brandweerregio,1997,https://cartomap.github.io/nl/wgs84/brandweerregio_1997.geojson,https://cartomap.github.io/nl/rd/brandweerregio_1997.geojson
@@ -83,6 +85,7 @@ buurt,2020,https://cartomap.github.io/nl/wgs84/buurt_2020.geojson,https://cartom
 buurt,2021,https://cartomap.github.io/nl/wgs84/buurt_2021.geojson,https://cartomap.github.io/nl/rd/buurt_2021.geojson
 buurt,2022,https://cartomap.github.io/nl/wgs84/buurt_2022.geojson,https://cartomap.github.io/nl/rd/buurt_2022.geojson
 buurt,2023,https://cartomap.github.io/nl/wgs84/buurt_2023.geojson,https://cartomap.github.io/nl/rd/buurt_2023.geojson
+buurt,2024,https://cartomap.github.io/nl/wgs84/buurt_2024.geojson,https://cartomap.github.io/nl/rd/buurt_2024.geojson
 coropgebied,1995,https://cartomap.github.io/nl/wgs84/coropgebied_1995.geojson,https://cartomap.github.io/nl/rd/coropgebied_1995.geojson
 coropgebied,1996,https://cartomap.github.io/nl/wgs84/coropgebied_1996.geojson,https://cartomap.github.io/nl/rd/coropgebied_1996.geojson
 coropgebied,1997,https://cartomap.github.io/nl/wgs84/coropgebied_1997.geojson,https://cartomap.github.io/nl/rd/coropgebied_1997.geojson
@@ -222,6 +225,7 @@ ggdregio,2020,https://cartomap.github.io/nl/wgs84/ggdregio_2020.geojson,https://
 ggdregio,2021,https://cartomap.github.io/nl/wgs84/ggdregio_2021.geojson,https://cartomap.github.io/nl/rd/ggdregio_2021.geojson
 ggdregio,2022,https://cartomap.github.io/nl/wgs84/ggdregio_2022.geojson,https://cartomap.github.io/nl/rd/ggdregio_2022.geojson
 ggdregio,2023,https://cartomap.github.io/nl/wgs84/ggdregio_2023.geojson,https://cartomap.github.io/nl/rd/ggdregio_2023.geojson
+ggdregio,2024,https://cartomap.github.io/nl/wgs84/ggdregio_2024.geojson,https://cartomap.github.io/nl/rd/ggdregio_2024.geojson
 grootstedelijke_agglomeratie,2000,https://cartomap.github.io/nl/wgs84/grootstedelijke_agglomeratie_2000.geojson,https://cartomap.github.io/nl/rd/grootstedelijke_agglomeratie_2000.geojson
 grootstedelijke_agglomeratie,2001,https://cartomap.github.io/nl/wgs84/grootstedelijke_agglomeratie_2001.geojson,https://cartomap.github.io/nl/rd/grootstedelijke_agglomeratie_2001.geojson
 grootstedelijke_agglomeratie,2002,https://cartomap.github.io/nl/wgs84/grootstedelijke_agglomeratie_2002.geojson,https://cartomap.github.io/nl/rd/grootstedelijke_agglomeratie_2002.geojson
@@ -247,6 +251,7 @@ jeugdregio,2020,https://cartomap.github.io/nl/wgs84/jeugdregio_2020.geojson,http
 jeugdregio,2021,https://cartomap.github.io/nl/wgs84/jeugdregio_2021.geojson,https://cartomap.github.io/nl/rd/jeugdregio_2021.geojson
 jeugdregio,2022,https://cartomap.github.io/nl/wgs84/jeugdregio_2022.geojson,https://cartomap.github.io/nl/rd/jeugdregio_2022.geojson
 jeugdregio,2023,https://cartomap.github.io/nl/wgs84/jeugdregio_2023.geojson,https://cartomap.github.io/nl/rd/jeugdregio_2023.geojson
+jeugdregio,2024,https://cartomap.github.io/nl/wgs84/jeugdregio_2024.geojson,https://cartomap.github.io/nl/rd/jeugdregio_2024.geojson
 kamervankoophandelregio,2008,https://cartomap.github.io/nl/wgs84/kamervankoophandelregio_2008.geojson,https://cartomap.github.io/nl/rd/kamervankoophandelregio_2008.geojson
 kamervankoophandelregio,2009,https://cartomap.github.io/nl/wgs84/kamervankoophandelregio_2009.geojson,https://cartomap.github.io/nl/rd/kamervankoophandelregio_2009.geojson
 kamervankoophandelregio,2010,https://cartomap.github.io/nl/wgs84/kamervankoophandelregio_2010.geojson,https://cartomap.github.io/nl/rd/kamervankoophandelregio_2010.geojson
@@ -263,6 +268,7 @@ kamervankoophandelregio,2020,https://cartomap.github.io/nl/wgs84/kamervankoophan
 kamervankoophandelregio,2021,https://cartomap.github.io/nl/wgs84/kamervankoophandelregio_2021.geojson,https://cartomap.github.io/nl/rd/kamervankoophandelregio_2021.geojson
 kamervankoophandelregio,2022,https://cartomap.github.io/nl/wgs84/kamervankoophandelregio_2022.geojson,https://cartomap.github.io/nl/rd/kamervankoophandelregio_2022.geojson
 kamervankoophandelregio,2023,https://cartomap.github.io/nl/wgs84/kamervankoophandelregio_2023.geojson,https://cartomap.github.io/nl/rd/kamervankoophandelregio_2023.geojson
+kamervankoophandelregio,2024,https://cartomap.github.io/nl/wgs84/kamervankoophandelregio_2024.geojson,https://cartomap.github.io/nl/rd/kamervankoophandelregio_2024.geojson
 landbouwgebied,1995,https://cartomap.github.io/nl/wgs84/landbouwgebied_1995.geojson,https://cartomap.github.io/nl/rd/landbouwgebied_1995.geojson
 landbouwgebied,1996,https://cartomap.github.io/nl/wgs84/landbouwgebied_1996.geojson,https://cartomap.github.io/nl/rd/landbouwgebied_1996.geojson
 landbouwgebied,1997,https://cartomap.github.io/nl/wgs84/landbouwgebied_1997.geojson,https://cartomap.github.io/nl/rd/landbouwgebied_1997.geojson
@@ -292,6 +298,7 @@ landbouwgebied,2020,https://cartomap.github.io/nl/wgs84/landbouwgebied_2020.geoj
 landbouwgebied,2021,https://cartomap.github.io/nl/wgs84/landbouwgebied_2021.geojson,https://cartomap.github.io/nl/rd/landbouwgebied_2021.geojson
 landbouwgebied,2022,https://cartomap.github.io/nl/wgs84/landbouwgebied_2022.geojson,https://cartomap.github.io/nl/rd/landbouwgebied_2022.geojson
 landbouwgebied,2023,https://cartomap.github.io/nl/wgs84/landbouwgebied_2023.geojson,https://cartomap.github.io/nl/rd/landbouwgebied_2023.geojson
+landbouwgebied,2024,https://cartomap.github.io/nl/wgs84/landbouwgebied_2024.geojson,https://cartomap.github.io/nl/rd/landbouwgebied_2024.geojson
 landbouwgroep,1995,https://cartomap.github.io/nl/wgs84/landbouwgroep_1995.geojson,https://cartomap.github.io/nl/rd/landbouwgroep_1995.geojson
 landbouwgroep,1996,https://cartomap.github.io/nl/wgs84/landbouwgroep_1996.geojson,https://cartomap.github.io/nl/rd/landbouwgroep_1996.geojson
 landbouwgroep,1997,https://cartomap.github.io/nl/wgs84/landbouwgroep_1997.geojson,https://cartomap.github.io/nl/rd/landbouwgroep_1997.geojson
@@ -321,6 +328,7 @@ landbouwgroep,2020,https://cartomap.github.io/nl/wgs84/landbouwgroep_2020.geojso
 landbouwgroep,2021,https://cartomap.github.io/nl/wgs84/landbouwgroep_2021.geojson,https://cartomap.github.io/nl/rd/landbouwgroep_2021.geojson
 landbouwgroep,2022,https://cartomap.github.io/nl/wgs84/landbouwgroep_2022.geojson,https://cartomap.github.io/nl/rd/landbouwgroep_2022.geojson
 landbouwgroep,2023,https://cartomap.github.io/nl/wgs84/landbouwgroep_2023.geojson,https://cartomap.github.io/nl/rd/landbouwgroep_2023.geojson
+landbouwgroep,2024,https://cartomap.github.io/nl/wgs84/landbouwgroep_2024.geojson,https://cartomap.github.io/nl/rd/landbouwgroep_2024.geojson
 landsdeel,1995,https://cartomap.github.io/nl/wgs84/landsdeel_1995.geojson,https://cartomap.github.io/nl/rd/landsdeel_1995.geojson
 landsdeel,1996,https://cartomap.github.io/nl/wgs84/landsdeel_1996.geojson,https://cartomap.github.io/nl/rd/landsdeel_1996.geojson
 landsdeel,1997,https://cartomap.github.io/nl/wgs84/landsdeel_1997.geojson,https://cartomap.github.io/nl/rd/landsdeel_1997.geojson
@@ -422,6 +430,7 @@ regionaalmeld_coordinatiepunt,2020,https://cartomap.github.io/nl/wgs84/regionaal
 regionaalmeld_coordinatiepunt,2021,https://cartomap.github.io/nl/wgs84/regionaalmeld_coordinatiepunt_2021.geojson,https://cartomap.github.io/nl/rd/regionaalmeld_coordinatiepunt_2021.geojson
 regionaalmeld_coordinatiepunt,2022,https://cartomap.github.io/nl/wgs84/regionaalmeld_coordinatiepunt_2022.geojson,https://cartomap.github.io/nl/rd/regionaalmeld_coordinatiepunt_2022.geojson
 regionaalmeld_coordinatiepunt,2023,https://cartomap.github.io/nl/wgs84/regionaalmeld_coordinatiepunt_2023.geojson,https://cartomap.github.io/nl/rd/regionaalmeld_coordinatiepunt_2023.geojson
+regionaalmeld_coordinatiepunt,2024,https://cartomap.github.io/nl/wgs84/regionaalmeld_coordinatiepunt_2024.geojson,https://cartomap.github.io/nl/rd/regionaalmeld_coordinatiepunt_2024.geojson
 regionale_eenheid,2014,https://cartomap.github.io/nl/wgs84/regionale_eenheid_2014.geojson,https://cartomap.github.io/nl/rd/regionale_eenheid_2014.geojson
 regionale_eenheid,2015,https://cartomap.github.io/nl/wgs84/regionale_eenheid_2015.geojson,https://cartomap.github.io/nl/rd/regionale_eenheid_2015.geojson
 regionale_eenheid,2016,https://cartomap.github.io/nl/wgs84/regionale_eenheid_2016.geojson,https://cartomap.github.io/nl/rd/regionale_eenheid_2016.geojson
@@ -438,6 +447,7 @@ regionale_energiestrategie,2020,https://cartomap.github.io/nl/wgs84/regionale_en
 regionale_energiestrategie,2021,https://cartomap.github.io/nl/wgs84/regionale_energiestrategie_2021.geojson,https://cartomap.github.io/nl/rd/regionale_energiestrategie_2021.geojson
 regionale_energiestrategie,2022,https://cartomap.github.io/nl/wgs84/regionale_energiestrategie_2022.geojson,https://cartomap.github.io/nl/rd/regionale_energiestrategie_2022.geojson
 regionale_energiestrategie,2023,https://cartomap.github.io/nl/wgs84/regionale_energiestrategie_2023.geojson,https://cartomap.github.io/nl/rd/regionale_energiestrategie_2023.geojson
+regionale_energiestrategie,2024,https://cartomap.github.io/nl/wgs84/regionale_energiestrategie_2024.geojson,https://cartomap.github.io/nl/rd/regionale_energiestrategie_2024.geojson
 regioplus_arbeidsmarktregio,2015,https://cartomap.github.io/nl/wgs84/regioplus_arbeidsmarktregio_2015.geojson,https://cartomap.github.io/nl/rd/regioplus_arbeidsmarktregio_2015.geojson
 regioplus_arbeidsmarktregio,2016,https://cartomap.github.io/nl/wgs84/regioplus_arbeidsmarktregio_2016.geojson,https://cartomap.github.io/nl/rd/regioplus_arbeidsmarktregio_2016.geojson
 regioplus_arbeidsmarktregio,2017,https://cartomap.github.io/nl/wgs84/regioplus_arbeidsmarktregio_2017.geojson,https://cartomap.github.io/nl/rd/regioplus_arbeidsmarktregio_2017.geojson
@@ -447,6 +457,7 @@ regioplus_arbeidsmarktregio,2020,https://cartomap.github.io/nl/wgs84/regioplus_a
 regioplus_arbeidsmarktregio,2021,https://cartomap.github.io/nl/wgs84/regioplus_arbeidsmarktregio_2021.geojson,https://cartomap.github.io/nl/rd/regioplus_arbeidsmarktregio_2021.geojson
 regioplus_arbeidsmarktregio,2022,https://cartomap.github.io/nl/wgs84/regioplus_arbeidsmarktregio_2022.geojson,https://cartomap.github.io/nl/rd/regioplus_arbeidsmarktregio_2022.geojson
 regioplus_arbeidsmarktregio,2023,https://cartomap.github.io/nl/wgs84/regioplus_arbeidsmarktregio_2023.geojson,https://cartomap.github.io/nl/rd/regioplus_arbeidsmarktregio_2023.geojson
+regioplus_arbeidsmarktregio,2024,https://cartomap.github.io/nl/wgs84/regioplus_arbeidsmarktregio_2024.geojson,https://cartomap.github.io/nl/rd/regioplus_arbeidsmarktregio_2024.geojson
 ressort,2015,https://cartomap.github.io/nl/wgs84/ressort_2015.geojson,https://cartomap.github.io/nl/rd/ressort_2015.geojson
 ressort,2016,https://cartomap.github.io/nl/wgs84/ressort_2016.geojson,https://cartomap.github.io/nl/rd/ressort_2016.geojson
 ressort,2017,https://cartomap.github.io/nl/wgs84/ressort_2017.geojson,https://cartomap.github.io/nl/rd/ressort_2017.geojson
@@ -456,6 +467,7 @@ ressort,2020,https://cartomap.github.io/nl/wgs84/ressort_2020.geojson,https://ca
 ressort,2021,https://cartomap.github.io/nl/wgs84/ressort_2021.geojson,https://cartomap.github.io/nl/rd/ressort_2021.geojson
 ressort,2022,https://cartomap.github.io/nl/wgs84/ressort_2022.geojson,https://cartomap.github.io/nl/rd/ressort_2022.geojson
 ressort,2023,https://cartomap.github.io/nl/wgs84/ressort_2023.geojson,https://cartomap.github.io/nl/rd/ressort_2023.geojson
+ressort,2024,https://cartomap.github.io/nl/wgs84/ressort_2024.geojson,https://cartomap.github.io/nl/rd/ressort_2024.geojson
 rpagebied,2002,https://cartomap.github.io/nl/wgs84/rpagebied_2002.geojson,https://cartomap.github.io/nl/rd/rpagebied_2002.geojson
 rpagebied,2003,https://cartomap.github.io/nl/wgs84/rpagebied_2003.geojson,https://cartomap.github.io/nl/rd/rpagebied_2003.geojson
 rpagebied,2004,https://cartomap.github.io/nl/wgs84/rpagebied_2004.geojson,https://cartomap.github.io/nl/rd/rpagebied_2004.geojson
@@ -490,6 +502,7 @@ stadsgewest,2015,https://cartomap.github.io/nl/wgs84/stadsgewest_2015.geojson,ht
 subres_regio,2021,https://cartomap.github.io/nl/wgs84/subres_regio_2021.geojson,https://cartomap.github.io/nl/rd/subres_regio_2021.geojson
 subres_regio,2022,https://cartomap.github.io/nl/wgs84/subres_regio_2022.geojson,https://cartomap.github.io/nl/rd/subres_regio_2022.geojson
 subres_regio,2023,https://cartomap.github.io/nl/wgs84/subres_regio_2023.geojson,https://cartomap.github.io/nl/rd/subres_regio_2023.geojson
+subres_regio,2024,https://cartomap.github.io/nl/wgs84/subres_regio_2024.geojson,https://cartomap.github.io/nl/rd/subres_regio_2024.geojson
 toeristengebied,1995,https://cartomap.github.io/nl/wgs84/toeristengebied_1995.geojson,https://cartomap.github.io/nl/rd/toeristengebied_1995.geojson
 toeristengebied,1996,https://cartomap.github.io/nl/wgs84/toeristengebied_1996.geojson,https://cartomap.github.io/nl/rd/toeristengebied_1996.geojson
 toeristengebied,1997,https://cartomap.github.io/nl/wgs84/toeristengebied_1997.geojson,https://cartomap.github.io/nl/rd/toeristengebied_1997.geojson
@@ -519,6 +532,7 @@ toeristengebied,2020,https://cartomap.github.io/nl/wgs84/toeristengebied_2020.ge
 toeristengebied,2021,https://cartomap.github.io/nl/wgs84/toeristengebied_2021.geojson,https://cartomap.github.io/nl/rd/toeristengebied_2021.geojson
 toeristengebied,2022,https://cartomap.github.io/nl/wgs84/toeristengebied_2022.geojson,https://cartomap.github.io/nl/rd/toeristengebied_2022.geojson
 toeristengebied,2023,https://cartomap.github.io/nl/wgs84/toeristengebied_2023.geojson,https://cartomap.github.io/nl/rd/toeristengebied_2023.geojson
+toeristengebied,2024,https://cartomap.github.io/nl/wgs84/toeristengebied_2024.geojson,https://cartomap.github.io/nl/rd/toeristengebied_2024.geojson
 toeristengroep,2006,https://cartomap.github.io/nl/wgs84/toeristengroep_2006.geojson,https://cartomap.github.io/nl/rd/toeristengroep_2006.geojson
 toeristengroep,2009,https://cartomap.github.io/nl/wgs84/toeristengroep_2009.geojson,https://cartomap.github.io/nl/rd/toeristengroep_2009.geojson
 toeristengroep,2010,https://cartomap.github.io/nl/wgs84/toeristengroep_2010.geojson,https://cartomap.github.io/nl/rd/toeristengroep_2010.geojson
@@ -533,6 +547,7 @@ toeristengroep,2020,https://cartomap.github.io/nl/wgs84/toeristengroep_2020.geoj
 toeristengroep,2021,https://cartomap.github.io/nl/wgs84/toeristengroep_2021.geojson,https://cartomap.github.io/nl/rd/toeristengroep_2021.geojson
 toeristengroep,2022,https://cartomap.github.io/nl/wgs84/toeristengroep_2022.geojson,https://cartomap.github.io/nl/rd/toeristengroep_2022.geojson
 toeristengroep,2023,https://cartomap.github.io/nl/wgs84/toeristengroep_2023.geojson,https://cartomap.github.io/nl/rd/toeristengroep_2023.geojson
+toeristengroep,2024,https://cartomap.github.io/nl/wgs84/toeristengroep_2024.geojson,https://cartomap.github.io/nl/rd/toeristengroep_2024.geojson
 veiligheidsregio,2011,https://cartomap.github.io/nl/wgs84/veiligheidsregio_2011.geojson,https://cartomap.github.io/nl/rd/veiligheidsregio_2011.geojson
 veiligheidsregio,2012,https://cartomap.github.io/nl/wgs84/veiligheidsregio_2012.geojson,https://cartomap.github.io/nl/rd/veiligheidsregio_2012.geojson
 veiligheidsregio,2013,https://cartomap.github.io/nl/wgs84/veiligheidsregio_2013.geojson,https://cartomap.github.io/nl/rd/veiligheidsregio_2013.geojson
@@ -546,10 +561,12 @@ veiligheidsregio,2020,https://cartomap.github.io/nl/wgs84/veiligheidsregio_2020.
 veiligheidsregio,2021,https://cartomap.github.io/nl/wgs84/veiligheidsregio_2021.geojson,https://cartomap.github.io/nl/rd/veiligheidsregio_2021.geojson
 veiligheidsregio,2022,https://cartomap.github.io/nl/wgs84/veiligheidsregio_2022.geojson,https://cartomap.github.io/nl/rd/veiligheidsregio_2022.geojson
 veiligheidsregio,2023,https://cartomap.github.io/nl/wgs84/veiligheidsregio_2023.geojson,https://cartomap.github.io/nl/rd/veiligheidsregio_2023.geojson
+veiligheidsregio,2024,https://cartomap.github.io/nl/wgs84/veiligheidsregio_2024.geojson,https://cartomap.github.io/nl/rd/veiligheidsregio_2024.geojson
 veiligthuisregio,2020,https://cartomap.github.io/nl/wgs84/veiligthuisregio_2020.geojson,https://cartomap.github.io/nl/rd/veiligthuisregio_2020.geojson
 veiligthuisregio,2021,https://cartomap.github.io/nl/wgs84/veiligthuisregio_2021.geojson,https://cartomap.github.io/nl/rd/veiligthuisregio_2021.geojson
 veiligthuisregio,2022,https://cartomap.github.io/nl/wgs84/veiligthuisregio_2022.geojson,https://cartomap.github.io/nl/rd/veiligthuisregio_2022.geojson
 veiligthuisregio,2023,https://cartomap.github.io/nl/wgs84/veiligthuisregio_2023.geojson,https://cartomap.github.io/nl/rd/veiligthuisregio_2023.geojson
+veiligthuisregio,2024,https://cartomap.github.io/nl/wgs84/veiligthuisregio_2024.geojson,https://cartomap.github.io/nl/rd/veiligthuisregio_2024.geojson
 wijk,1995,https://cartomap.github.io/nl/wgs84/wijk_1995.geojson,https://cartomap.github.io/nl/rd/wijk_1995.geojson
 wijk,1996,https://cartomap.github.io/nl/wgs84/wijk_1996.geojson,https://cartomap.github.io/nl/rd/wijk_1996.geojson
 wijk,1997,https://cartomap.github.io/nl/wgs84/wijk_1997.geojson,https://cartomap.github.io/nl/rd/wijk_1997.geojson
@@ -579,6 +596,7 @@ wijk,2020,https://cartomap.github.io/nl/wgs84/wijk_2020.geojson,https://cartomap
 wijk,2021,https://cartomap.github.io/nl/wgs84/wijk_2021.geojson,https://cartomap.github.io/nl/rd/wijk_2021.geojson
 wijk,2022,https://cartomap.github.io/nl/wgs84/wijk_2022.geojson,https://cartomap.github.io/nl/rd/wijk_2022.geojson
 wijk,2023,https://cartomap.github.io/nl/wgs84/wijk_2023.geojson,https://cartomap.github.io/nl/rd/wijk_2023.geojson
+wijk,2024,https://cartomap.github.io/nl/wgs84/wijk_2024.geojson,https://cartomap.github.io/nl/rd/wijk_2024.geojson
 zorgkantoorregio,2009,https://cartomap.github.io/nl/wgs84/zorgkantoorregio_2009.geojson,https://cartomap.github.io/nl/rd/zorgkantoorregio_2009.geojson
 zorgkantoorregio,2010,https://cartomap.github.io/nl/wgs84/zorgkantoorregio_2010.geojson,https://cartomap.github.io/nl/rd/zorgkantoorregio_2010.geojson
 zorgkantoorregio,2011,https://cartomap.github.io/nl/wgs84/zorgkantoorregio_2011.geojson,https://cartomap.github.io/nl/rd/zorgkantoorregio_2011.geojson
@@ -594,3 +612,4 @@ zorgkantoorregio,2020,https://cartomap.github.io/nl/wgs84/zorgkantoorregio_2020.
 zorgkantoorregio,2021,https://cartomap.github.io/nl/wgs84/zorgkantoorregio_2021.geojson,https://cartomap.github.io/nl/rd/zorgkantoorregio_2021.geojson
 zorgkantoorregio,2022,https://cartomap.github.io/nl/wgs84/zorgkantoorregio_2022.geojson,https://cartomap.github.io/nl/rd/zorgkantoorregio_2022.geojson
 zorgkantoorregio,2023,https://cartomap.github.io/nl/wgs84/zorgkantoorregio_2023.geojson,https://cartomap.github.io/nl/rd/zorgkantoorregio_2023.geojson
+zorgkantoorregio,2024,https://cartomap.github.io/nl/wgs84/zorgkantoorregio_2024.geojson,https://cartomap.github.io/nl/rd/zorgkantoorregio_2024.geojson
