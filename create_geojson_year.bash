@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 JAAR="$1"
-JAAR=${JAAR:=2022}
+JAAR=${JAAR:=2024}
 
 mkdir -p build/rd
 mkdir -p build/wgs84
