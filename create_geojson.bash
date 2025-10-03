@@ -4,11 +4,11 @@ mkdir -p build/rd
 mkdir -p build/wgs84
 mkdir -p build/toc
 
-#THISYEAR=`date +%Y`
-THISYEAR=2025
+THISYEAR=`date +%Y`
+#THISYEAR=2026
 BEGINYEAR=1995
 JAREN=`eval echo "{$THISYEAR..$BEGINYEAR}"`
-#echo "JAREN: $JAREN"
+echo "JAREN: $JAREN"
 
 for JAAR in $JAREN
 do
@@ -21,8 +21,8 @@ do
   # a list of gebiedsindelingen
   test ! -f "$REGIOTXT" &&
     curl "$WFS?&request=GetCapabilities&service=WFS" > $TOC
-  
-  grep "<Title>" $TOC | sed -e 's/.*<Title>\(.*\)<[/]Title>/\1/' | sort |uniq > $REGIOTXT
+
+  grep "<Name>" $TOC | sed -e 's/.*<Name>gebiedsindelingen:\(.*\)<[/]Name>/\1/' | sort |uniq > $REGIOTXT
   
   cat $REGIOTXT | grep  '_gegeneraliseerd' | grep -v '_niet_' - > $SHAPESTXT
   cat $REGIOTXT | grep "point" - > $POINTSTXT
@@ -30,7 +30,8 @@ do
   MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
   #PDOKNAMES=`head -n 1 $SHAPESTXT`
   PDOKNAMES=`cat $SHAPESTXT`
-  
+
+
   for TYPENAME in $PDOKNAMES 
   do
     REGION=${TYPENAME/cbs_/}
