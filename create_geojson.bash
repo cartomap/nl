@@ -4,7 +4,8 @@ mkdir -p build/rd
 mkdir -p build/wgs84
 mkdir -p build/toc
 
-THISYEAR=`date +%Y`
+#THISYEAR=`date +%Y`
+THISYEAR=2025
 BEGINYEAR=1995
 JAREN=`eval echo "{$THISYEAR..$BEGINYEAR}"`
 #echo "JAREN: $JAREN"
