@@ -17,11 +17,11 @@ do
 for JAAR in $JAREN
 do
     echo "** JAAR=$JAAR"
-    REGIOTXT=build/toc/regios_$SOURCE_$JAAR.txt
-    SHAPESTXT=build/toc/shapes_$SOURCE_$JAAR.txt
-    POINTSTXT=build/toc/points_$SOURCE_$JAAR.txt
+    REGIOTXT=build/toc/regios_${SOURCE}_${JAAR}.txt
+    SHAPESTXT=build/toc/shapes_${SOURCE}_${JAAR}.txt
+    POINTSTXT=build/toc/points_${SOURCE}_${JAAR}.txt
     WFS=https://service.pdok.nl/cbs/$SOURCE/$JAAR/wfs/v1_0
-    TOC=build/toc/wfs_$SOURCE_$JAAR.xml
+    TOC=build/toc/wfs_${SOURCE}_${JAAR}.xml
   
   # a list of gebiedsindelingen
   test ! -f "$REGIOTXT" &&
@@ -53,7 +53,7 @@ do
         FEATURESURL="$FEATURESURL&propertyName=postcode,geom"      
       fi
     REGION=${TYPENAME/cbs_/}
-      REGION=${REGION%_*}_$SOURCE_$JAAR
+      REGION=${REGION%_*}_${SOURCE}_${JAAR}
   
     JSON="build/wgs84/$REGION.json"
     GEOJSON="build/wgs84/$REGION.geojson"
