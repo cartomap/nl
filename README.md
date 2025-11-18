@@ -33,3 +33,14 @@ https://cartomap.github.io/nl/rd/gemeente_2016.topojson
 ```
 
 Kijk voor een overzichtvan de kaarten op https://cartomap.github.io/nl of https://github.com/cartomap/nl/tree/gh-pages/wgs84
+
+# Code draaien
+
+Scripts zijn gemaakt voor Bash, dus gebruik Linux, MacOS of WSL.
+
+1. Installeer [nodejs >= 18](https://nodejs.org/en/download)
+2. Installeer yarn op het systeem: `npm install -g yarn`
+3. Ga naar de repository map (waar `yarn.lock` in staat) en installeer de benodigde packages: `yarn install`
+4. Run het script `create_geojson.bash`. Pas zo nodig de variabele `BEGINYEAR` aan naar een recenter jaar om slechts enkele jaren te downloaden.
+
+Bij gebruik van VS Code kan de [bashdb extensie](https://marketplace.visualstudio.com/items?itemName=rogalmic.bash-debug) van pas komen om de scripts stap voor stap te doorlopen.
