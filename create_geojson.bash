@@ -53,7 +53,7 @@ do
         FEATURESURL="$FEATURESURL&propertyName=postcode,geom"      
       fi
     REGION=${TYPENAME/cbs_/}
-      REGION=${REGION%_*}_${SOURCE}_${JAAR}
+      REGION=${REGION%_*}_${JAAR}
   
     JSON="build/wgs84/$REGION.json"
     GEOJSON="build/wgs84/$REGION.geojson"
