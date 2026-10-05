@@ -5,7 +5,7 @@ mkdir -p build/wgs84
 mkdir -p build/toc
 
 THISYEAR=`date +%Y`
-#THISYEAR=2026
+#THISYEAR=2027
 BEGINYEAR=1995
 JAREN=`eval echo "{$THISYEAR..$BEGINYEAR}"`
 SOURCES="postcode4 gebiedsindelingen"
