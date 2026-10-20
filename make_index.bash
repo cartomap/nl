@@ -4,8 +4,9 @@ SHAPESTXT=`ls ./build/toc/shapes*.txt`
 TYPES=`cat $SHAPESTXT | sort | uniq | sed 's/_gegeneraliseerd//'`
 
 function create_url(){
-  #echo "${1}"
-  for shape in $1
+  local shapes=$1
+  
+  for shape in $shapes
   do
     url=${shape/build/.}
     year=${shape%.*}
