@@ -22,7 +22,8 @@ do
    #rm "raw/$zipfile"
 done
 
-years=$(ls raw/gpkg  | grep -o -e "\d\d\d\d")
+years=$(ls ./raw/gpkg  | grep -o -e "\d\d\d\d")
+echo "Found years: $years"
 
 MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
 
@@ -32,6 +33,7 @@ function generate_year(){
   layerfile="build/toc/layers_${year}.json"
 
   echo "Generating layer file for year $year..."
+  echo "Using gpkg file: $gpkgfile"
   $MAPSHAPER "$gpkgfile" -info save-to="$layerfile"
 
   layers=$(jq -r '.[].layer_name' "$layerfile")
@@ -80,7 +82,7 @@ function generate_year(){
       id-field=statcode
   done
 
-#rm "$layerstxt"
+  echo "Finished processing year $year"
 }
 
 for year in $years
@@ -93,6 +95,7 @@ done
 # sorting regios.csv
 sort -u build/toc/gebiedsindeling.csv -o build/toc/gebiedsindeling.csv
 
+echo "Creating postcode files..."
 ./create_pc4.bash
 
 echo "Generating index.md..."
