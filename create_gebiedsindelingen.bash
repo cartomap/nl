@@ -11,7 +11,6 @@ ZIPFILES="cbsgebiedsindelingen1995_2015.zip cbsgebiedsindelingen2016_heden.zip"
 # Download the CBS gebiedsindelingen if not already present
 for zipfile in $ZIPFILES
 do
-  #zipfile="cbsgebiedsindelingen2016_heden.zip"
    if [ ! -f "raw/$zipfile" ]
    then
       echo "Downloading $zipfile..."
@@ -20,10 +19,12 @@ do
    mkdir -p raw/gpkg
    unzip -n  "raw/$zipfile" -d "raw/gpkg"
    #rm "raw/$zipfile"
+   break
 done
 
-years=$(ls ./raw/gpkg  | grep -o -e "\d\d\d\d")
+years=$(ls ./raw/gpkg  | grep -oE "\d\d\d\d")
 echo "Found years: $years"
+exit 1
 
 MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
 
