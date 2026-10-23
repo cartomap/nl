@@ -22,7 +22,7 @@ do
    break
 done
 
-years=$(ls ./raw/gpkg  | grep -oE "\d\d\d\d")
+years=$(ls ./raw/gpkg  | grep -oE "[[:digit:]]{4}")
 echo "Found years: $years"
 exit 1
 
