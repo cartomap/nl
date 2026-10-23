@@ -32,7 +32,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build and simplify maps
-        run: ./create_geojson.bash
+        run: ./create_gebiedsindelingen.bash
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1

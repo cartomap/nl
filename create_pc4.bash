@@ -99,6 +99,7 @@ do
       $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$GEOJSON" id-field=$IDFIELD precision=1 
       $MAPSHAPER "$JSON" -simplify 10% keep-shapes -o "$TOPOJSON" id-field=$IDFIELD precision=1
 done
+done
 rm build/*/*.json
 
 echo "Generating index.md..."
@@ -116,3 +117,4 @@ then
   echo "Failed to build files..."
   exit 1
 fi
+
