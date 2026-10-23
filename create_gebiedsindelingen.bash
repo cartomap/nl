@@ -19,6 +19,7 @@ do
    mkdir -p raw/gpkg
    unzip -n  "raw/$zipfile" -d "raw/gpkg"
    #rm "raw/$zipfile"
+   break
 done
 
 years=$(ls ./raw/gpkg  | grep -oE "[[:digit:]]{4}")

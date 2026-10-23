@@ -10,9 +10,14 @@
   "author": "Edwin de Jonge <edwindjonge@gmail.com>",
   "license": "GPL-2",
   "scripts": {
-    "test": "./create_geojson.bash"
+    "test": "./create_gebiedsindelingen.bash"
+  },
+  "allowScripts": {
+    "better-sqlite3@13.0.3": true,
+    "msgpackr-extract@3.0.4": true,
+    "better-sqlite3@12.11.1": true
   },
   "dependencies": {
-    "mapshaper": "^0.6.13"
+    "mapshaper": "^0.7.97"
   }
 }
