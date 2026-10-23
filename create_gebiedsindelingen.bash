@@ -19,12 +19,10 @@ do
    mkdir -p raw/gpkg
    unzip -n  "raw/$zipfile" -d "raw/gpkg"
    #rm "raw/$zipfile"
-   break
 done
 
 years=$(ls ./raw/gpkg  | grep -oE "[[:digit:]]{4}")
 echo "Found years: $years"
-exit 1
 
 MAPSHAPER=./node_modules/mapshaper/bin/mapshaper
 
